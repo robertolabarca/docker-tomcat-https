@@ -1,0 +1,7 @@
+    # Ubuntu  UNIVERSIDAD CENTRAL DE LAS VILLAS (UCLV)
+
+deb http://repos.uclv.edu.cu/ubuntu jammy main restricted universe multiverse
+deb http://repos.uclv.edu.cu/ubuntu jammy-backports main restricted universe multiverse
+#deb http://repos.uclv.edu.cu/ubuntu jammy-proposed main restricted universe multiverse
+deb http://repos.uclv.edu.cu/ubuntu jammy-security main restricted universe multiverse
+deb http://repos.uclv.edu.cu/ubuntu jammy-updates main restricted universe multiverse
