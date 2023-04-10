@@ -12,6 +12,5 @@ RUN apt-get update && apt-get install iputils-ping -y && \
     rm -drf /usr/local/tomcat/webapps && \
     mv -f /usr/local/tomcat/webapps.dist/ /usr/local/tomcat/webapps/ && \
     rm -rf /var/lib/apt/lists/*
-EXPOSE 8080
 EXPOSE 8443
 CMD ["catalina.sh", "run"]
