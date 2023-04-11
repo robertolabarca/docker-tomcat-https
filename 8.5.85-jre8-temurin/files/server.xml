@@ -86,7 +86,7 @@
     
    <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
                maxThreads="150" scheme="https" secure="true"
-               keystoreFile="conf/cert/tomcat-cert.keystore" keystorePass="zaqWE*123"
+               keystoreFile="ssl/tomcat.keystore" keystorePass="Tomcat-2023"
                clientAuth="false" sslProtocol="TLS" sslVerifyClient="optional"
    sslEnabledProtocols="TLSv1.2,TLSv1.1,SSLv2Hello"/>
     

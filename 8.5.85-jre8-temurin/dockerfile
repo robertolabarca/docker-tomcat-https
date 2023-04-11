@@ -1,8 +1,8 @@
 FROM tomcat:8.5.85-jre8-temurin
 LABEL MAINTAINER="roberto.labarca@nauta.cu"
 ENV DEBIAN_FRONTEND=noninteractive
-ADD cert/tomcat-cert.csr /usr/local/tomcat/conf/cert/tomcat-cert.csr
-ADD cert/tomcat-cert.keystore /usr/local/tomcat/conf/cert/tomcat-cert.keystore
+ADD cert/tomcat.csr /usr/local/tomcat/ssl/tomcat.csr
+ADD cert/tomcat.keystore /usr/local/tomcat/ssl/tomcat.keystore
 ADD files/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 ADD files/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
 ADD files/host-manager.xml /usr/local/tomcat/conf/Catalina/localhost/host-manager.xml
