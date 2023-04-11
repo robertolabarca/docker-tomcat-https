@@ -1,0 +1,12 @@
+FROM docker.uclv.cu/tomcat:9-jre8-alpine
+LABEL MAINTAINER="roberto.labarca@nauta.cu"
+ENV DEBIAN_FRONTEND=noninteractive
+ADD cert/tomcat-rsa-cert.pem /usr/local/tomcat/ssl/tomcat-rsa-cert.pem
+ADD cert/tomcat-rsa-key.pem /usr/local/tomcat/ssl/tomcat-rsa-key.pem
+ADD files/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
+ADD files/server.xml /usr/local/tomcat/conf/server.xml
+ADD files/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
+ADD files/host-manager.xml /usr/local/tomcat/conf/Catalina/localhost/host-manager.xml
+EXPOSE 8443 
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
