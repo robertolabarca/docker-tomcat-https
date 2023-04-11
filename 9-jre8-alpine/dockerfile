@@ -7,7 +7,7 @@ ADD files/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 ADD files/server.xml /usr/local/tomcat/conf/server.xml
 ADD files/manager.xml /usr/local/tomcat/conf/Catalina/localhost/manager.xml
 ADD files/host-manager.xml /usr/local/tomcat/conf/Catalina/localhost/host-manager.xml
-RUN apk update && apk upgrade -y
+RUN apk update && apk upgrade
 EXPOSE 8443 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
